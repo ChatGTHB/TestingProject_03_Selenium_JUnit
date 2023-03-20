@@ -1,0 +1,40 @@
+Testing Project 3
+
+
+Test Case 1:
+
+➢ https://shopdemo.e-junkie.com/ sitesine gidiniz
+➢ E-book add to cart butonuna tıklatınız. ➢ Add promo code butonuna tıklatıp veri giriniz.
+➢ Apply butonuna tıklayınız. ➢ Invalid promo code yazısının görüldüğünü doğrulayınız
+
+
+Test Case:2
+
+➢ https://shopdemo.e-junkie.com/ sitesine gidiniz
+➢ E-book add to cart butonuna tıklatınız. ➢ Pay using debit card a tıklatınız. ➢ Pay butonuna tıklatınız.
+ ➢ Invalid Email, Invalid Email, invalid billing name mesajlarının görüldüğünü doğrulayınız.
+
+
+Test Case:3
+
+➢ https://shopdemo.e-junkie.com/ sitesine gidiniz
+➢ E-book add to cart butonuna tıklatınız. ➢ Pay using debit card a tıklatınız. ➢ Card numarasına “1111 1111 1111 1111” giriniz
+➢ “Your card number is invalid” mesajının görüldüğünü doğrulayınız.
+
+
+Test Case: 4
+
+➢ https://shopdemo.e-junkie.com/ sitesine gidiniz
+➢ E-book add to cart butonuna tıklatınız. ➢ Pay using debit card a tıklatınız. ➢ Email, confirm Email, name, telefon, company, Card number(“4242 4242 4242 4242” ) giriniz,
+expdate, cvc kodu bilgilerini doldurunuz
+➢ Pay butonuna tıklayınız
+➢ “your order is confirmed. Thank you!” mesajının görüldüğünü doğrulayınız
+
+
+Test Case:5
+
+➢ https://shopdemo.e-junkie.com/ sitesine gidiniz
+➢ ContactUs butonuna tıklattınız
+➢ Name, Email, Subject ve mesaj kısımlarını doldurun
+➢ Send butonuna tıklatın
+➢ Alert in görüldüğünü doğrulayın ve alert I kapatın
