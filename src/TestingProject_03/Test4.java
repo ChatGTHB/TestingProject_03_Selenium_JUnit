@@ -19,7 +19,7 @@ public class Test4 extends BaseDriver {
 
         driver.get("https://shopdemo.e-junkie.com/");
 
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(60));
 
         WebElement eBook= driver.findElement(By.linkText("Ebook"));
         eBook.click();
@@ -74,6 +74,7 @@ public class Test4 extends BaseDriver {
                 "%22%3Atrue%7D&firstLoad=true&&pending_reason=" +
                 "&_ga=2.226775773.1118002772.1679312268-1937456812.1679312268&&gajs=&auser=&abeacon=&");
 
+
         WebElement payConfirmationMessage= driver.findElement(By.xpath("//span[@ class='green_text_margin']"));
 
         Assert.assertEquals("your order is confirmed. Thank you!", payConfirmationMessage.getText());
@@ -81,3 +82,23 @@ public class Test4 extends BaseDriver {
         waitAndClose();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

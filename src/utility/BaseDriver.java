@@ -19,16 +19,10 @@ public class BaseDriver {
         logger.setLevel(Level.SEVERE); //
 
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-       // System.setProperty(EdgeDriverService.EDGE_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
 
-       // driver = new ChromeDriver();
-       // driver = new EdgeDriver();
-
-        driver.manage().window().maximize(); // Ekranı max yapıyor.
+        driver.manage().window().maximize();
 
         Duration dr = Duration.ofSeconds(30);
         driver.manage().timeouts().pageLoadTimeout(dr);
