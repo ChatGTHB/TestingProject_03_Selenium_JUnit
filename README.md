@@ -1,5 +1,9 @@
 # TestingProject_03_Selenium_JUnit
+
 [EN]
+
+➢ Java and Selenium library will be used 
+➢ JUnit will be used
 
 Testing Project 3
 
@@ -47,6 +51,9 @@ Test Case:5
 =====================================************************************==========================================
 
 [TR]
+
+➢ Java ve Selenium kütüphanesini kullanılacak 
+➢ JUnit kullanılacak
 
 Test Projesi 3
 
