@@ -1,5 +1,6 @@
 package TestingProject_03;
 
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utility.BaseDriver;
@@ -18,8 +19,6 @@ public class Test3 extends BaseDriver {
 
         driver.get("https://shopdemo.e-junkie.com/");
 
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
-
         WebElement eBook= driver.findElement(By.linkText("Ebook"));
         eBook.click();
 
@@ -29,20 +28,20 @@ public class Test3 extends BaseDriver {
         WebElement iframe = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//iframe[@class='EJIframeV3 EJOverlayV3']")));
         driver.switchTo().frame(iframe);
 
-        WebElement payUsingDebit = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='Payment-Button CC']")));
-        payUsingDebit.click();
+        WebElement payCreditCard= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[class='Payment-Button CC']")));
+        payCreditCard.click();
 
-        WebElement iframe2 = driver.findElement(By.xpath("//iframe[@title='Güvenli kart ödeme giriş çerçevesi']"));
-        driver.switchTo().frame(iframe2);
+        WebElement iframeCardNumber= driver.findElement(By.cssSelector("iframe[name^='__privateStripeFrame']"));
+        driver.switchTo().frame(iframeCardNumber);
 
-        WebElement cardNumberBox = driver.findElement(By.xpath("(//input[@class='InputElement is-empty Input Input--empty'])[1]"));
-        cardNumberBox.sendKeys("1111 1111 1111 1111");
+        WebElement cardNumber= driver.findElement(By.cssSelector("[name='cardnumber']"));
+        cardNumber.sendKeys("1111 1111 1111 1111");
 
         driver.switchTo().parentFrame();
 
-        WebElement verificationMessage = driver.findElement(By.xpath("//span[text()='Kart numaranız geçersiz.']"));
+        WebElement confirmationMessage= driver.findElement(By.xpath("//span[text()='Your card number is invalid.']"));
 
-        Assert.assertEquals("Kart numaranız geçersiz.", verificationMessage.getText());
+        Assert.assertEquals(confirmationMessage.getText(),"Your card number is invalid.");
 
         waitAndClose();
     }
