@@ -4,6 +4,7 @@ Testing Project 3
 Test Case 1:
 
 ➢ https://shopdemo.e-junkie.com/ sitesine gidiniz
+➢ E-book'a tıklatınız
 ➢ E-book add to cart butonuna tıklatınız.
 ➢ Add promo code butonuna tıklatıp veri giriniz.
 ➢ Apply butonuna tıklayınız.
@@ -13,15 +14,17 @@ Test Case 1:
 Test Case:2
 
 ➢ https://shopdemo.e-junkie.com/ sitesine gidiniz
+➢ E-book'a tıklatınız
 ➢ E-book add to cart butonuna tıklatınız.
 ➢ Pay using debit card a tıklatınız.
 ➢ Pay butonuna tıklatınız.
-➢ Invalid Email, Invalid Email, invalid billing name mesajlarının görüldüğünü doğrulayınız.
+➢ Invalid Email, Invalid Email, Invalid Billing Name mesajlarının görüldüğünü doğrulayınız.
 
 
 Test Case:3
 
 ➢ https://shopdemo.e-junkie.com/ sitesine gidiniz
+➢ E-book'a tıklatınız
 ➢ E-book add to cart butonuna tıklatınız.
 ➢ Pay using debit card a tıklatınız.
 ➢ Card numarasına “1111 1111 1111 1111” giriniz
@@ -31,6 +34,7 @@ Test Case:3
 Test Case: 4
 
 ➢ https://shopdemo.e-junkie.com/ sitesine gidiniz
+➢ E-book'a tıklatınız
 ➢ E-book add to cart butonuna tıklatınız.
 ➢ Pay using debit card a tıklatınız.
 ➢ Email, confirm Email, name, telefon, company, Card number(“4242 4242 4242 4242” ) giriniz,
