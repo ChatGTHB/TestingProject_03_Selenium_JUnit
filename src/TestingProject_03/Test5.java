@@ -1,14 +1,9 @@
 package TestingProject_03;
 
 import utility.BaseDriver;
-import org.junit.Assert;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.junit.*;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class Test5 extends BaseDriver {
 
@@ -17,22 +12,20 @@ public class Test5 extends BaseDriver {
 
         driver.get("https://shopdemo.e-junkie.com/");
 
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
-
         WebElement contactUs = driver.findElement(By.xpath("//a[@class='contact']"));
         contactUs.click();
 
         WebElement name = driver.findElement(By.xpath("//input[@id='sender_name']"));
-        name.sendKeys("Name");
+        name.sendKeys(randomGenerator.name().fullName());
 
         WebElement eMail = driver.findElement(By.xpath("//input[@id='sender_email']"));
-        eMail.sendKeys("email@email.com");
+        eMail.sendKeys(randomGenerator.internet().emailAddress());
 
         WebElement subject = driver.findElement(By.xpath("//input[@id='sender_subject']"));
-        subject.sendKeys("book");
+        subject.sendKeys(randomGenerator.lorem().word());
 
         WebElement message = driver.findElement(By.xpath("//textarea[@id='sender_message']"));
-        message.sendKeys("message");
+        message.sendKeys(randomGenerator.lorem().paragraph());
 
         WebElement sendMessage = driver.findElement(By.xpath("//button[text()='Send Message']"));
         sendMessage.click();
