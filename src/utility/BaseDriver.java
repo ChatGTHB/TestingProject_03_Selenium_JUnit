@@ -1,5 +1,6 @@
 package utility;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,6 +13,7 @@ public class BaseDriver {
 
     public static WebDriver driver; // SingletonDriver method
     public static WebDriverWait wait;
+    public static Faker randomGenerator;
 
     static {  // The condition of this is that it is extends and takes place in the first place.
 
@@ -23,6 +25,7 @@ public class BaseDriver {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30)); // 30 sec delay: time to load the page
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));  // 30 sec delay: time to find the element
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        randomGenerator=new Faker();
     }
 
     public static void waitAndClose() {
