@@ -1,9 +1,11 @@
 package TestingProject_03;
 
-import utility.BaseDriver;
-import org.junit.*;
-import org.openqa.selenium.*;
+import org.junit.Assert;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import utility.BaseDriver;
 
 public class Test5 extends BaseDriver {
 
@@ -30,7 +32,7 @@ public class Test5 extends BaseDriver {
         WebElement sendMessage = driver.findElement(By.xpath("//button[text()='Send Message']"));
         sendMessage.click();
 
-        Assert.assertEquals(wait.until(ExpectedConditions.alertIsPresent()).getText(),"Recaptcha didn't match");
+        Assert.assertEquals(wait.until(ExpectedConditions.alertIsPresent()).getText(), "Recaptcha didn't match");
 
         driver.switchTo().alert().accept();
 

@@ -1,14 +1,11 @@
 package TestingProject_03;
 
+import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utility.BaseDriver;
-import org.junit.Assert;
-import org.junit.Test;
-
-import java.time.Duration;
 
 public class Test1 extends BaseDriver {
 
@@ -17,9 +14,7 @@ public class Test1 extends BaseDriver {
 
         driver.get("https://shopdemo.e-junkie.com/");
 
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
-
-        WebElement eBook= driver.findElement(By.linkText("Ebook"));
+        WebElement eBook = driver.findElement(By.linkText("Ebook"));
         eBook.click();
 
         WebElement eBookAddToCart = driver.findElement(By.xpath("//button[@class='view_product']"));
