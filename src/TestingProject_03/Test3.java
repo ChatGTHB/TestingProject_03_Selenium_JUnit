@@ -1,10 +1,7 @@
 package TestingProject_03;
 
-import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utility.BaseDriver;
-import utility.MyFunction;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
